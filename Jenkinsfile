@@ -10,6 +10,7 @@ pipeline {
       steps {
         bat 'npm install'
         bat 'npx playwright install'
+        bat 'npx cypress install'
       }
     }
 
@@ -29,14 +30,6 @@ pipeline {
   post {
     always {
       archiveArtifacts artifacts: 'reports/**/*, screenshots/**/*', allowEmptyArchive: true
-      publishHTML([
-        allowMissing: true,
-        alwaysLinkToLastBuild: true,
-        keepAll: true,
-        reportDir: 'reports',
-        reportFiles: 'playwright-report.html,cypress-report.html',
-        reportName: 'Reportes E2E Demoblaze'
-      ])
     }
   }
 }
