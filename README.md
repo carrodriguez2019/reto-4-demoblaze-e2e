@@ -12,6 +12,7 @@ El objetivo es validar flujos funcionales principales usando escenarios BDD en G
 - Cypress
 - Cucumber / Gherkin
 - Jenkins
+- Allure Report
 - Node.js / npm
 
 ## Alcance Automatizado
@@ -153,6 +154,18 @@ Ejecutar toda la suite E2E:
 npm run test:e2e
 ```
 
+Ejecutar toda la suite y generar reporte Allure:
+
+```powershell
+npm run test:e2e:allure
+```
+
+Abrir el reporte Allure generado:
+
+```powershell
+npm run allure:open
+```
+
 ## Evidencias
 
 El proyecto genera evidencias automaticas:
@@ -163,6 +176,8 @@ reports/cypress-report.html
 reports/cypress-report.json
 reports/cypress-videos/
 screenshots/
+allure-results/
+allure-report/
 ```
 
 Playwright:
@@ -177,6 +192,12 @@ Cypress:
 - Graba video de ejecucion.
 - Genera screenshots cuando falla una prueba.
 
+Allure:
+
+- Consolida resultados de Playwright/Cucumber y Cypress.
+- Guarda resultados crudos en `allure-results/`.
+- Genera el reporte navegable en `allure-report/`.
+
 ## Jenkins
 
 El archivo `Jenkinsfile` contiene un pipeline con stages para ejecutar automaticamente las pruebas.
@@ -187,6 +208,7 @@ Stages principales:
 Instalar dependencias
 Ejecutar pruebas Playwright
 Ejecutar pruebas Cypress
+Generar reporte Allure
 ```
 
 Al finalizar, Jenkins archiva las evidencias ubicadas en:

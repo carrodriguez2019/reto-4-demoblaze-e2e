@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","6544","Iniciar sesion con usuario valido","Flujos principales en Demoblaze con Cypress","2026-06-09","passed","2026-06-09","","","",""
+"","4455","Agregar un producto al carrito","","2026-06-09","passed","2026-06-09","","","",""
+"","3266","Navegar por la categoria Phones","","2026-06-09","passed","2026-06-09","","","",""
+"","4801","Validar producto agregado en el carrito","Flujos principales en Demoblaze con Cypress","2026-06-09","passed","2026-06-09","","","",""

@@ -3,15 +3,22 @@
   "version": "1.0.0",
   "description": "Automatizacion E2E sobre Demoblaze con Playwright y Cypress usando BDD y POM",
   "scripts": {
-    "test:playwright": "cucumber-js features/playwright/*.feature --require playwright/steps/*.js --require playwright/support/*.js --format html:reports/playwright-report.html",
+    "test:playwright": "cucumber-js --config cucumber.playwright.js",
     "test:cypress": "cypress run",
-    "test:e2e": "npm run test:playwright && npm run test:cypress"
+    "test:e2e": "npm run test:playwright && npm run test:cypress",
+    "allure:generate": "set PATH=C:\\Windows\\System32;%PATH%&& allure generate allure-results --clean -o allure-report",
+    "allure:open": "set PATH=C:\\Windows\\System32;%PATH%&& allure open allure-report",
+    "test:e2e:allure": "npm run test:e2e && npm run allure:generate"
   },
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^22.1.0",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.5",
     "@cucumber/cucumber": "^11.2.0",
+    "@cucumber/messages": "^27.2.0",
     "@playwright/test": "^1.52.0",
+    "allure-commandline": "^2.34.1",
+    "allure-cucumberjs": "^3.2.2",
+    "allure-cypress": "^3.2.2",
     "cypress": "^14.0.0"
   },
   "cypress-cucumber-preprocessor": {

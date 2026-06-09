@@ -25,11 +25,17 @@ pipeline {
         bat 'npm run test:cypress'
       }
     }
+
+    stage('Generar reporte Allure') {
+      steps {
+        bat 'npm run allure:generate'
+      }
+    }
   }
 
   post {
     always {
-      archiveArtifacts artifacts: 'reports/**/*, screenshots/**/*', allowEmptyArchive: true
+      archiveArtifacts artifacts: 'reports/**/*, screenshots/**/*, allure-results/**/*, allure-report/**/*', allowEmptyArchive: true
     }
   }
 }
