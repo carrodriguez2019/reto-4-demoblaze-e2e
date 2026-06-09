@@ -1,0 +1,32 @@
+{
+  "name": "reto-4-demoblaze-e2e",
+  "version": "1.0.0",
+  "description": "Automatizacion E2E sobre Demoblaze con Playwright y Cypress usando BDD y POM",
+  "scripts": {
+    "test:playwright": "cucumber-js features/playwright/*.feature --require playwright/steps/*.js --require playwright/support/*.js --format html:reports/playwright-report.html",
+    "test:cypress": "cypress run",
+    "test:e2e": "npm run test:playwright && npm run test:cypress"
+  },
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.1.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.5",
+    "@cucumber/cucumber": "^11.2.0",
+    "@playwright/test": "^1.52.0",
+    "cypress": "^14.0.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/cypress/steps/**/*.js",
+    "html": {
+      "enabled": true,
+      "output": "reports/cypress-report.html"
+    },
+    "json": {
+      "enabled": true,
+      "output": "reports/cypress-report.json"
+    },
+    "attachments": {
+      "addScreenshots": true,
+      "addVideos": true
+    }
+  }
+}

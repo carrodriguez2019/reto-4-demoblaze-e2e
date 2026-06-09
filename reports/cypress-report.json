@@ -1,0 +1,126 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "flujos-principales-en-demoblaze-con-cypress;iniciar-sesion-con-usuario-valido",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Iniciar sesion con usuario valido",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "que el usuario abre Demoblaze en Cypress",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1365000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "inicia sesion con usuario \"test\" y contrasena \"test\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1397000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "deberia visualizar el nombre del usuario en la barra superior",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3670000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "flujos-principales-en-demoblaze-con-cypress;validar-producto-agregado-en-el-carrito",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Validar producto agregado en el carrito",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "que el usuario abre Demoblaze en Cypress",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 166000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "agrega el producto \"Nokia lumia 1520\" al carrito desde Cypress",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1248000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "navega al carrito de compras",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 603000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "deberia visualizar el producto \"Nokia lumia 1520\" en el carrito",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 492000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "flujos-principales-en-demoblaze-con-cypress",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Flujos principales en Demoblaze con Cypress",
+    "tags": [],
+    "uri": "features\\cypress\\demoblaze-cypress.feature"
+  }
+]
